@@ -27,6 +27,9 @@ image:
             "AUTH0_CLIENT_ID": "",
             "AUTH0_CLIENT_SECRET": ""
         }'
+        OTEL_EXPORTER_OTLP_ENDPOINT: https://api.honeycomb.io
+        OTEL_SERVICE_NAME: spryker-unknown
+        OTEL_EXPORTER_OTLP_HEADERS: "x-honeycomb-team=le1jtssvHOMexDB8rkQ1IB"
     node:
         version: 16
         npm: 8
