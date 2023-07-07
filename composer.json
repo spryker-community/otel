@@ -15,6 +15,7 @@
         "ext-readline": "*",
         "ext-redis": "*",
         "league/flysystem": "^2.5.0",
+        "open-telemetry/exporter-otlp": "~1.0.0beta1@beta",
         "open-telemetry/opentelemetry-logger-monolog": "^0.0.1",
         "open-telemetry/sdk": "~1.0.0beta1@beta",
         "spryker-eco/loggly": "^0.1.1",

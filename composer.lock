@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1f58ecb8df82d934b3af9531861cb243",
+    "content-hash": "ff2612959fc6b7c2ba7707f679ea1b74",
     "packages": [
         {
             "name": "async-aws/core",
@@ -3197,6 +3197,136 @@
                 "source": "https://github.com/open-telemetry/opentelemetry-php"
             },
             "time": "2023-06-26T11:10:20+00:00"
+        },
+        {
+            "name": "open-telemetry/exporter-otlp",
+            "version": "1.0.0beta11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/opentelemetry-php/exporter-otlp.git",
+                "reference": "c74757302c649b0bd3e9d1c744060514fb6fd952"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/opentelemetry-php/exporter-otlp/zipball/c74757302c649b0bd3e9d1c744060514fb6fd952",
+                "reference": "c74757302c649b0bd3e9d1c744060514fb6fd952",
+                "shasum": ""
+            },
+            "require": {
+                "open-telemetry/api": "^1.0",
+                "open-telemetry/gen-otlp-protobuf": "^1.0",
+                "open-telemetry/sdk": "^1.0",
+                "php": "^7.4 || ^8.0",
+                "php-http/discovery": "^1.14"
+            },
+            "suggest": {
+                "php-http/async-client-implementation": "For otlp/http exporting",
+                "php-http/discovery": "For otlp/http exporting",
+                "psr/http-factory-implementation": "For otlp/http exporting"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "_register.php"
+                ],
+                "psr-4": {
+                    "OpenTelemetry\\Contrib\\Otlp\\": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "opentelemetry-php contributors",
+                    "homepage": "https://github.com/open-telemetry/opentelemetry-php/graphs/contributors"
+                }
+            ],
+            "description": "OTLP exporter for OpenTelemetry.",
+            "keywords": [
+                "Metrics",
+                "exporter",
+                "gRPC",
+                "http",
+                "opentelemetry",
+                "otel",
+                "otlp",
+                "tracing"
+            ],
+            "support": {
+                "chat": "https://app.slack.com/client/T08PSQ7BQ/C01NFPCV44V",
+                "docs": "https://opentelemetry.io/docs/php",
+                "issues": "https://github.com/open-telemetry/opentelemetry-php/issues",
+                "source": "https://github.com/open-telemetry/opentelemetry-php"
+            },
+            "time": "2023-06-26T11:10:20+00:00"
+        },
+        {
+            "name": "open-telemetry/gen-otlp-protobuf",
+            "version": "1.0.0beta5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/opentelemetry-php/gen-otlp-protobuf.git",
+                "reference": "d347413ed0b71ba429438eab076b57a11e2522dd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/opentelemetry-php/gen-otlp-protobuf/zipball/d347413ed0b71ba429438eab076b57a11e2522dd",
+                "reference": "d347413ed0b71ba429438eab076b57a11e2522dd",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4 || ^8.0"
+            },
+            "suggest": {
+                "ext-grpc": "To use the gRPC based exporters",
+                "ext-protobuf": "For better performance, when dealing with the protobuf format",
+                "google/protobuf": "To get started quickly, install the native protobuf library."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Opentelemetry\\Proto\\": "Opentelemetry/Proto/",
+                    "GPBMetadata\\Opentelemetry\\": "GPBMetadata/Opentelemetry/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "opentelemetry-php contributors",
+                    "homepage": "https://github.com/open-telemetry/opentelemetry-php/graphs/contributors"
+                }
+            ],
+            "description": "PHP protobuf files for communication with OpenTelemetry OTLP collectors/servers.",
+            "keywords": [
+                "Metrics",
+                "apm",
+                "gRPC",
+                "logging",
+                "opentelemetry",
+                "otel",
+                "otlp",
+                "protobuf",
+                "tracing"
+            ],
+            "support": {
+                "source": "https://github.com/opentelemetry-php/gen-otlp-protobuf/tree/1.0.0beta5"
+            },
+            "time": "2023-06-08T23:25:59+00:00"
         },
         {
             "name": "open-telemetry/opentelemetry-logger-monolog",
@@ -63349,6 +63479,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "open-telemetry/exporter-otlp": 10,
         "open-telemetry/sdk": 10,
         "spryker-sdk/integrator": 20,
         "spryker/docker-chromedriver": 20
