@@ -1,11 +1,11 @@
 version: "0.1"
 
-namespace: spryker_b2b_dev
+namespace: otel_dev
 tag: 'dev'
 
 environment: docker.dev
 image:
-    tag: spryker/php:8.1
+    tag: lstrojny/spryker-php-otel
     php:
         enabled-extensions:
             - blackfire
