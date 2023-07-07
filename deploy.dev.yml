@@ -31,7 +31,7 @@ image:
         OTEL_SERVICE_NAME: spryker-unknown
         OTEL_EXPORTER_OTLP_HEADERS: "x-honeycomb-team=le1jtssvHOMexDB8rkQ1IB"
         OTEL_BLRP_MAX_EXPORT_BATCH_SIZE: 1
-        OTEL_BLRP_MAX_EXPORT_BATCH_SIZE: 1
+        OTEL_BLRP_SCHEDULE_DELAY: 1
     node:
         version: 16
         npm: 8
