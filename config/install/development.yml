@@ -3,8 +3,6 @@ env:
 
 stores:
     - DE
-    - AT
-    - US
 
 command-timeout: 3600
 
@@ -135,7 +133,6 @@ sections:
             command: 'vendor/bin/console propel:database:drop'
             pre: 'hidden/maintenance-zed-on'
             stores:
-                - US
                 - DE
             groups:
                 - propel
@@ -149,7 +146,6 @@ sections:
         propel-create:
             command: 'vendor/bin/console propel:database:create'
             stores:
-                - US
                 - DE
             groups:
                 - propel
@@ -157,7 +153,6 @@ sections:
         propel-postgres-compatibility:
             command: 'vendor/bin/console propel:pg-sql-compat'
             stores:
-                - US
                 - DE
             groups:
                 - propel
@@ -165,7 +160,6 @@ sections:
         propel-copy-schema:
             command: "vendor/bin/console propel:schema:copy"
             stores:
-                - US
                 - DE
             groups:
                 - propel
@@ -184,7 +178,6 @@ sections:
             command: 'vendor/bin/console propel:migration:check'
             breakOnFailure: false
             stores:
-                - US
                 - DE
             groups:
                 - propel
@@ -199,7 +192,6 @@ sections:
         propel-migrate:
             command: 'vendor/bin/console propel:migrate'
             stores:
-                - US
                 - DE
             groups:
                 - propel
@@ -219,7 +211,6 @@ sections:
             command: 'vendor/bin/console setup:init-db'
             timeout: 360000
             stores:
-                - US
                 - DE
 
         setup-search-create-sources:
@@ -247,15 +238,9 @@ sections:
             stores:
                 - DE
 
-        import-us-region-demodata:
-            command: 'vendor/bin/console data:import --config=data/import/local/full_US.yml'
-            stores:
-                - US
-
         update-product-labels:
             command: 'vendor/bin/console product-label:relations:update'
             stores:
-                - US
                 - DE
 
     jenkins-up:
