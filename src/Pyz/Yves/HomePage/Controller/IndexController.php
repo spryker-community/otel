@@ -35,20 +35,20 @@ class IndexController extends SprykerIndexController
         $tracer = $tracerProvider->getTracer('io.opentelemetry.contrib.php');
 
         //start a root span
-        $rootSpan = $tracer->spanBuilder('root')->startSpan();
+        $rootSpan = $tracer->spanBuilder('Spryker')->startSpan();
 
         //future spans will be parented to the currently active span
         $rootScope = $rootSpan->activate();
 
         try {
-            $span1 = $tracer->spanBuilder('foo')->startSpan();
+            $span1 = $tracer->spanBuilder('is')->startSpan();
             $span1Scope = $span1->activate();
 
             try {
                 $this->getLogger()->info("Start generating metrics");
 
-                $span2 = $tracer->spanBuilder('bar')->startSpan();
-                echo 'OpenTelemetry welcomes PHP' . PHP_EOL;
+                $span2 = $tracer->spanBuilder('great')->startSpan();
+                echo 'OpenTelemetry welcomes Spryker' . PHP_EOL;
                 $span2->end();
 
                 $this->exportMetric();
