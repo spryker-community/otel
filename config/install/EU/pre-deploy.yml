@@ -3,6 +3,7 @@ env:
 
 stores:
     - DE
+    - AT
 
 sections:
     scheduler-stop:

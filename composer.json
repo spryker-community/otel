@@ -14,11 +14,7 @@
         "ext-pgsql": "*",
         "ext-readline": "*",
         "ext-redis": "*",
-        "google/protobuf": "^3.24",
         "league/flysystem": "^2.5.0",
-        "open-telemetry/exporter-otlp": "1.0.0RC1",
-        "open-telemetry/opentelemetry-logger-monolog": "^0.0.4",
-        "open-telemetry/sdk": "1.0.0RC1",
         "spryker-eco/loggly": "^0.1.1",
         "spryker-eco/new-relic": "^2.0.1",
         "spryker-feature/agent-assist": "^202307.0",
@@ -301,9 +297,7 @@
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "symfony/flex": true,
             "symfony/runtime": true,
-            "spryker-sdk/integrator": false,
-            "php-http/discovery": true,
-            "sllh/composer-versions-check": true
+            "spryker-sdk/integrator": false
         }
     },
     "repositories": [

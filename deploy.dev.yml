@@ -1,11 +1,11 @@
 version: "0.1"
 
-namespace: otel_dev
+namespace: spryker_b2b_dev
 tag: 'dev'
 
 environment: docker.dev
 image:
-    tag: bate/spryker-php-otel:8.1
+    tag: spryker/php:8.1
     php:
         enabled-extensions:
             - blackfire
@@ -30,17 +30,6 @@ image:
             "AUTH0_CLIENT_ID": "",
             "AUTH0_CLIENT_SECRET": ""
         }'
-#        OTEL_EXPORTER_OTLP_ENDPOINT: https://otlp.eu01.nr-data.net
-#        OTEL_SERVICE_NAME: spryker-unknown
-#        OTEL_EXPORTER_OTLP_HEADERS: "api-key=<NewRelicApiKey>"
-#        OTEL_BLRP_MAX_EXPORT_BATCH_SIZE: 1
-#        OTEL_BLRP_SCHEDULE_DELAY: 1
-
-        OTEL_EXPORTER_OTLP_ENDPOINT: https://api.honeycomb.io
-        OTEL_SERVICE_NAME: spryker-unknown
-        OTEL_EXPORTER_OTLP_HEADERS: "x-honeycomb-team=le1jtssvHOMexDB8rkQ1IB"
-        OTEL_BLRP_MAX_EXPORT_BATCH_SIZE: 1
-        OTEL_BLRP_SCHEDULE_DELAY: 1
     node:
         version: 18
         npm: 9

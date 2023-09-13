@@ -7,7 +7,6 @@
 
 namespace Pyz\Zed\Console;
 
-use Pyz\Zed\CustomConsole\Controller\CustomConsole;
 use Pyz\Zed\DataImport\DataImportConfig;
 use Pyz\Zed\Development\Communication\Console\AcceptanceCodeTestConsole;
 use Pyz\Zed\Development\Communication\Console\ApiCodeTestConsole;
@@ -381,8 +380,6 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
             new ScopeCacheCollectorConsole(),
 
             new DateTimeProductConfiguratorBuildFrontendConsole(),
-
-            new CustomConsole(),
         ];
 
         $propelCommands = $container->getLocator()->propel()->facade()->getConsoleCommands();
